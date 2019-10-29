@@ -26,3 +26,14 @@ To install the plugin, follow these instructions.
 		composer require refinery/helpers
 
 4. In the Control Panel, go to Settings → Plugins and click the “Install” button for Refinery Helpers.
+
+## Append Params Filter
+
+Takes a URL string (usually from a Craft entry) and appends the parameter string to the end.  This is smart enough to account for situations where the initial URL string already contains params (swapping ? for & symbols).
+
+```
+{% set linkUrl = 'https://google.com?abc=123' %}
+{% set params = '&test=1&foo=2' %}
+
+<p>Here's a <a href="{{ linkUrl | appendParams(params) }}">link</a>.</p>
+```

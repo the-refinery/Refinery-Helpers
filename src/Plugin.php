@@ -1,5 +1,9 @@
 <?php
+
 namespace therefinery\helpers;
+
+use Craft;
+use therefinery\helpers\twigextensions\UrlHelpersTwigExtension;
 
 class Plugin extends \craft\base\Plugin
 {
@@ -7,6 +11,6 @@ class Plugin extends \craft\base\Plugin
     {
         parent::init();
 
-        // Custom initialization code goes here...
+        Craft::$app->view->registerTwigExtension(new UrlHelpersTwigExtension());
     }
 }
