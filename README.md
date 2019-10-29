@@ -54,5 +54,5 @@ Takes an HTML block (from something like a Redactor field) and runs the Append P
   <li>The coastline of <a href="/wiki/Northeast_Region,_Brazil" title="Northeast Region, Brazil">Northeast Brazil</a> is hit by <b><a href="/wiki/2019_Northeast_Brazil_oil_spill" title="2019 Northeast Brazil oil spill">an oil spill</a></b> of unknown origin.</li></ul>
 {% endset %}
 
-{{ blockContent | appendParamsToHref(params) | raw }}
+{{ blockContent | appendParamsToHref(params) }}
 ```

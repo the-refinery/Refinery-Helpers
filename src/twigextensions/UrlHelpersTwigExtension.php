@@ -8,7 +8,7 @@ class UrlHelpersTwigExtension extends \Twig_Extension
     {
         return [
           new \Twig_SimpleFilter('appendParams', [$this, 'appendParamsFilter']),
-          new \Twig_SimpleFilter('appendParamsToHref', [$this, 'appendParamsToHrefFilter']),
+          new \Twig_SimpleFilter('appendParamsToHref', [$this, 'appendParamsToHrefFilter'], ['is_safe' => ['html']]),
         ];
     }
 
