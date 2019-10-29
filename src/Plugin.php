@@ -1,7 +1,7 @@
 <?php
 namespace therefinery\helpers;
 
-class RefineryHelpers extends \craft\base\Plugin
+class Plugin extends \craft\base\Plugin
 {
     public function init()
     {
